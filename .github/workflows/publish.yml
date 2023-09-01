@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v0.0.7
+      with:
+        host: ${{ secrets.server }}
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
+        port: ${{ secrets.port }}
+        script: |
+          [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+          cd ~/clevertec-global
+          git pull
+          npm install
+          npm run build
+          pm2 restart clevertec-global
