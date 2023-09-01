@@ -1,6 +1,6 @@
 const Page = () => (
     <>
-        Clevertec
+        Clevertec.ru
     </>
 );
 
