@@ -103,6 +103,7 @@
             height: calc((100vw - 8px - 90px - 80px) / 3);
             width: calc((100vw - 8px - 90px - 80px) / 3);
             max-height: 415px;
+            max-width: 415px;
             position: relative;
 
             @media (max-width:1000px) {
@@ -119,6 +120,7 @@
                 height: calc(100vw - 8px - 40px);
                 width: calc(100vw - 8px - 40px);
                 max-height: 452px;
+                max-width: 452px;
             }
         }
 
