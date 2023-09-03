@@ -1,0 +1,35 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.logo {
+    @include blockPosition;
+    height: 13.7vw;
+    max-height: 200px;
+    position: relative;
+
+    .logoImg {
+        object-fit: contain;
+    }
+
+    .logoSubTitle {
+        position: absolute;
+        bottom: -36px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: $dark-100;
+        text-transform: uppercase;
+
+        @media (max-width:1000px) {
+            bottom: -32px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @media (max-width:500px) {
+            bottom: -28px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

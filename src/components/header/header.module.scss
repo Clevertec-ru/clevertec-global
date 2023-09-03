@@ -1,0 +1,94 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+
+.header {
+    @include blockPositionHeader;
+    padding-top: 100px;
+    display: grid;
+    column-gap: 32px;
+    row-gap: 24px;
+    align-items: center;
+    grid-template-areas:
+        'title icon'
+        'text icon';
+
+    @media (max-width:1000px) {
+        column-gap: 24px;
+        row-gap: 16px;
+    }
+
+    @media (max-width:900px) {
+        padding-top: 12px;
+        row-gap: 0;
+        grid-template-areas:
+            'icon'
+            'title '
+            'text';
+    }
+
+    @media (max-width:350px) {
+        padding-top: 20px;
+    }
+
+    .headerTitle {
+        grid-area: title;
+        align-self: end;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 52px;
+        color: $dark-20;
+        text-transform: uppercase;
+
+        @media (max-width:900px) {
+            padding-top: 40px;
+            margin: 0 45px;
+        }
+
+        @media (max-width:500px) {
+            margin: 0 20px;
+            font-size: 32px;
+            line-height: 42px;
+        }
+
+        .headerTitleColor {
+            color: $red;
+        }
+    }
+
+    .headerText {
+        grid-area: text;
+        color: $black;
+
+        @media (max-width:900px) {
+            padding-top: 16px;
+            margin: 0 45px;
+        }
+
+        @media (max-width:500px) {
+            margin: 0 20px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    .headerIcon {
+        grid-area: icon;
+        width: 47vw;
+        max-width: 676px;
+        height: 24vw;
+        max-height: 346px;
+        position: relative;
+
+        @media (max-width:900px) {
+            width: calc(100vw - 8px);
+            max-width: 892px;
+            height: 51vw;
+            max-height: 460px;
+        }
+
+        .headerImg {
+            object-fit: contain;
+        }
+    }
+}

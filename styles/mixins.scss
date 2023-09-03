@@ -1,0 +1,53 @@
+@mixin blockPosition {
+    max-width: 1350px;
+    margin: 0 auto;
+
+    @media (max-width:1440px) {
+        margin: 0 45px;
+    }
+
+    @media (max-width:500px) {
+        margin: 0 20px;
+    }
+}
+
+@mixin blockPositionHeader {
+    max-width: 1395px;
+    margin: 0 auto;
+
+    @media (max-width:1440px) {
+        margin: 0 0 0 45px;
+    }
+
+    @media (max-width:900px) {
+        margin: 0;
+    }
+}
+
+@mixin blockPositionAbout {
+    max-width: 1440px;
+    margin: 40px auto 0;
+    padding: 80px 45px;
+
+    @media (max-width:1000px) {
+        padding: 80px 25px;
+    }
+
+    @media (max-width:500px) {
+        padding: 40px 20px;
+    }
+}
+
+@mixin blockPositionFooter {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 45px;
+
+    @media (max-width:1000px) {
+        padding: 80px 25px;
+    }
+
+    @media (max-width:500px) {
+        padding: 40px 20px;
+    }
+}
