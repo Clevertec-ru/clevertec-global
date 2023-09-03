@@ -1,0 +1,116 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.about {
+    @include blockPositionAbout;
+    background: #25293D;
+
+    .aboutTextBlock {
+        display: grid;
+        grid-template-areas:
+            'title text'
+            'title paragraph';
+        grid-template-columns: min-content 1fr;
+        column-gap: 152px;
+        row-gap: 16px;
+
+        @media (max-width:900px) {
+            grid-template-areas:
+                'title'
+                'text'
+                'paragraph';
+            grid-template-columns: 1fr;
+        }
+
+        .aboutTitle {
+            grid-area: title;
+            color: #FFFFFF;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 84px;
+            position: relative;
+
+            @media (max-width:500px) {
+                font-size: 40px;
+                line-height: 52px;
+            }
+        }
+
+        .aboutTitle::after {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border-color: none;
+            background-color: #D6001C;
+            position: absolute;
+            top: 54px;
+            left: 200px;
+
+            @media (max-width:500px) {
+                width: 12px;
+                height: 12px;
+                top: 32px;
+                left: 126px;
+            }
+        }
+
+
+        .aboutText {
+            grid-area: text;
+            color: #FFFFFF;
+
+            @media (max-width:500px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        .aboutTextParagraph {
+            grid-area: paragraph;
+            color: #FFFFFF;
+
+            @media (max-width:500px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .aboutTextColor {
+                color: #D6001C;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .aboutImages {
+        padding-top: 56px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width:800px) {
+            display: none;
+        }
+
+        @media (max-width:500px) {
+            padding-top: 26px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: max-content max-content max-content;
+        }
+
+        .aboutImage {
+            height: 31vw;
+            max-height: 450px;
+            position: relative;
+
+            @media (max-width:500px) {
+                height: calc(100vw - 8px - 40px)
+            }
+        }
+
+        .aboutImg {
+            object-fit: cover;
+        }
+    }
+}
