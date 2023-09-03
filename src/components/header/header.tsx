@@ -8,7 +8,7 @@ export const Header = () => (
             Transform your digital landscape with <span className={styles.headerTitleColor}>CleverNova</span>
         </h2>
         <p className={styles.headerText}>
-            We are a team of fintech experts – architects, developers and designers.We develop multifunctional mobile and web applications, which help grow business and showcase new user experience. We follow fintech trends and implement them in our customers' projects.
+            We are a team of fintech experts – architects, developers and designers. We develop multifunctional mobile and web applications, which help grow business and showcase new user experience. We follow fintech trends and implement them in our customers' projects.
         </p>
         <div className={styles.headerIcon}>
             <Image

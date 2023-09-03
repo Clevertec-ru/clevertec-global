@@ -10,7 +10,7 @@ export const About = () => (
             <h3 className={styles.aboutTitle}>About</h3>
             <p className={styles.aboutText}>We have broad views and great opportunities to amp up your business. Our teams work flexibly
                 and transparently. First and foremost, we thoroughly study the requirements and offer the most effecient solution. Then, we show the result at each stage and discuss possible improvements to contribute
-                to your ultimate success.Our Projects speak louder than words.
+                to your ultimate success. Our Projects speak louder than words.
             </p>
             <p className={styles.aboutTextParagraph}>
                 You can take a look at them in this <span className={styles.aboutTextColor}>case-book</span>.
