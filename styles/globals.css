@@ -39,6 +39,7 @@
 *:before,
 *:after {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* Убираем внутренние отступы */
@@ -54,8 +55,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -69,7 +70,6 @@ dd {
 /* Выставляем основные настройки по-умолчанию для body */
 body {
     min-height: 100vh;
-    scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -87,9 +87,9 @@ canvas {
     position: relative !important;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class */
-ul[class],
-ol[class] {
+/* Удаляем стандартную стилизацию для всех ul и il */
+ul,
+ol {
     list-style: none;
 }
 
@@ -174,6 +174,5 @@ body {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
     }
 }
