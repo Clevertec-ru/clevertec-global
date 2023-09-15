@@ -1,0 +1,14 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.sectionWrapper{
+    @include wrapper;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 900px;
+    flex: 1;
+}

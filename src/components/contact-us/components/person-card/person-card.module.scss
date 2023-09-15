@@ -1,0 +1,30 @@
+@import '../../../../../styles/const.scss';
+@import '../../../../../styles/mixins.scss';
+
+.sectionWrapper{
+    @include lightCard(32px, 32px, 20px);
+    grid-column: span 3;
+    transition: all 0.5s ease-in-out;
+    .avatarContainer{
+        position: relative;
+        width: 136px;
+        height: 136px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .cardTitle{
+        @include blockTitle
+    }
+    .cardInfo{
+        @include blockContent
+    }
+    &:hover {
+        background-color: $primary-text; 
+        .cardTitle {
+          color: $white; 
+        }
+        .cardInfo {
+          color: $white; 
+        }
+      }
+    }
