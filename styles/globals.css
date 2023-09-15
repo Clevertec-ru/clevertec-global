@@ -34,6 +34,22 @@
         url('/fonts/Inter-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Rubik-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/Rubik-Medium.ttf') format('truetype');
+}
+
 /* Указываем box sizing */
 *,
 *:before,
@@ -54,6 +70,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul,
 ol,

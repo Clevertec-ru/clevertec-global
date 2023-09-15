@@ -1,0 +1,44 @@
+@import '../../../../../styles/const.scss';
+@import '../../../../../styles/mixins.scss';
+
+.sectionWrapper{
+    @include lightCard(32px, 24px, 24px);
+    grid-column: span 4;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    .linkContainer{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+  }
+    .titleContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    svg {
+        width: 27px;
+        height: 27px;
+    }
+    .cardTitle{
+        @include blockTitle;
+    }
+    .cardInfo{
+        @include blockContent
+    }
+    &:last-of-type {
+    grid-column: span 2;
+  }
+    &:hover {
+    background-color: $hover-blue; 
+    .cardTitle {
+      color: $white; 
+    }
+    .cardInfo {
+      color: $white; 
+    }
+    svg path{
+        fill: white;
+     }
+  }
+}
