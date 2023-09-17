@@ -1,0 +1,25 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.overlay{
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100vh;
+    background-color: $overlay;
+}
+
+.displayOverlay{
+    display: flex;
+}
+
+body:has(.displayOverlay){
+    overflow-y: hidden;
+}

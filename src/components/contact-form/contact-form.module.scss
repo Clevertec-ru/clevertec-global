@@ -1,0 +1,34 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.contactFormContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .contactFormTitle{
+        font-family: 'Rubik';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .contactFormFields{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .contactFormTextArea{
+        border: 1px solid $primary-text;
+        border-radius: 24px;
+        padding: 16px 24px;
+        width: 100%;
+        resize: none;
+        outline: none;
+        @include inputPlaceholder;
+        &::placeholder{
+            color: $primary-text;
+        }
+    }
+}

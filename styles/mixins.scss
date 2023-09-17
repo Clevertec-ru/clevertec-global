@@ -45,6 +45,31 @@
     line-height: 130%;
 }
 
+@mixin buttonText {
+    font-family: 'Rubik';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+@mixin inputPlaceholder {
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; 
+}
+
+@mixin inputError {
+    color: $primary-error;
+    font-family: 'Inter';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
 @mixin lightCard($paddingVertical: 32px, $paddingHorizontal: 24px, $gap: 24px) {
     border-radius: 40px;
     background: $background;

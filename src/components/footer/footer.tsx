@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { FOOTER_INFO } from '../../constants/footer';
+import { NAV_MENU } from '../../constants/nav-menu';
 import { InfoBlockWithIcon } from './info-block-with-icon';
 
 import styles from './footer.module.scss';
-import { NAV_MENU } from '../../constants/nav-menu';
 
 export const Footer = () => (
     <footer className={styles.footerWrapper}>
