@@ -1,0 +1,15 @@
+@import '../../../../styles/const.scss';
+@import '../../../../styles/mixins.scss';
+
+.infoContainer {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    @include blockName($white);
+    
+    .iconContainer{
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+}

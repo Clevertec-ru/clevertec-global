@@ -1,0 +1,23 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.primaryButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 40px;
+    color: $white;
+    width: 100%;
+    background-color: $primary-blue;
+    @include buttonText;
+    &:hover{
+        background-color: $hover-blue;
+    }
+    &:active{
+        background-color: $pressed-blue;
+    }
+    &:disabled{
+        background-color: $action-disabled-color;
+    }
+}

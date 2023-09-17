@@ -1,0 +1,32 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.sectionWrapper{
+    @include wrapper;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    .sectionTitle{
+        @include blockName;
+        margin-bottom: 8px;
+    }
+
+    .contactText{
+        @include mediumSizeContent;
+        max-width: 968px;
+    }
+
+    .cardsContainer{
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto auto;
+        
+        &:nth-child(3){
+            grid-column: span 4;
+        }
+    }
+}
