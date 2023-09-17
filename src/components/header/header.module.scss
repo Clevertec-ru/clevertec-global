@@ -1,0 +1,10 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.headerContainer{
+    @include wrapper;
+   .modalButton{
+        max-width: 312px;
+        margin: 150px auto;   // временно для проверки кнопки под модалку
+    } 
+}

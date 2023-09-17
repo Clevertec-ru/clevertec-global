@@ -13,9 +13,10 @@ type CustomInputProps = {
     },
     value: string,
     onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
+    isRequired: boolean;
 }
 
-export const CustomInput = ({field, value, onChange}: CustomInputProps) => {
+export const CustomInput = ({ field, value, onChange, isRequired }: CustomInputProps) => {
     const [isActive, setIsActive] = useState(false);
     const [isError, setIsError] = useState(false);
 
@@ -24,24 +25,29 @@ export const CustomInput = ({field, value, onChange}: CustomInputProps) => {
     };
 
     const handleBlur = () => {
-        setIsError(!!(value && !field.regex.test(value)))
+        if (field.type === 'email') {
+            setIsError(!!(value && !field.regex.test(value)))
+        } else {
+            setIsError(!value);
+        }
         setIsActive(false);
     };
-    
+
     return (
-    <div className={styles.customFieldContainer}>
-        {(isActive && value || value ) && <span className={styles.floatingLabel}>{field.placeholder}</span>}
-        <input
-            type={field.type}
-            placeholder={field.placeholder}
-            className={styles.customField}
-            name={field.fieldName}
-            value={value}
-            onChange={onChange}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
+        <div className={styles.customFieldContainer}>
+            {(isActive && value || value) && <span className={styles.floatingLabel}>{field.placeholder}</span>}
+            <input
+                type={field.type}
+                placeholder={field.placeholder}
+                className={styles.customField}
+                name={field.fieldName}
+                value={value}
+                onChange={onChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                required={isRequired}
             />
-        {isError && <p className={styles.errorMessage}>{field.errorMessage}</p>}
-    </div>
-)
-} ;
+            {isError && <p className={styles.errorMessage}>{field.errorMessage}</p>}
+        </div>
+    )
+};

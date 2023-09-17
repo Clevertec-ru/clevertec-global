@@ -1,15 +1,7 @@
-import { CasesSection } from '../src/components/cases-section';
-import { ContactUs } from '../src/components/contact-us';
-import { Footer } from '../src/components/footer';
-import { NavMenu } from '../src/components/nav-menu';
+import { MainPage } from '../src/components/main-page';
 
 const Page = () => (
-    <>
-        <NavMenu />
-        <CasesSection />
-        <ContactUs />
-        <Footer />
-    </>
+    <MainPage/>
 );
 
 export default Page;
