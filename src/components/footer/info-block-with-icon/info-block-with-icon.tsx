@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import styles from './info-block-with-icon.module.scss';
 
 type InfoBlockWithIconProps = {

@@ -1,0 +1,10 @@
+@import '../../../../styles/const.scss';
+@import '../../../../styles/mixins.scss';
+
+.modalContainer {
+    background-color: $white;
+    width: 640px;
+    border-radius: 40px;
+    padding: 55px 48px;
+    background-color: $white;
+}
