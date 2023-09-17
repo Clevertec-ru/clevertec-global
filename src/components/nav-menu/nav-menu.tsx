@@ -89,31 +89,33 @@ export const NavMenu = () => {
     });
     return (
         <nav className={navClass}>
-            <h1 className={styles.navMenuLogo}>{NAV_MENU.logoTitle}</h1>
-            <ul className={styles.navItems}>
-                {NAV_MENU.menu.map(({ text, link }) =>
-                    <li className={styles.navMenuItem} key={text}>
-                        <Link href={link} className={styles.navMenuLink} scroll={false}>
-                            {text}
-                        </Link>
-                    </li>
-                )}
-            </ul>
-            <button
-                type="button"
-                className={navClassButtonBurger}
-                onClick={onBurgerClick}
-            >
-                <span />
-            </button>
-            {isBurgerOpen
-                &&
-                <BurgerMenu
-                    setIsBurgerOpen={setIsBurgerOpen}
-                    setIsActive={setIsActive}
-                    scrollPosition={scrollPosition}
-                    setScrollPosition={setScrollPosition}
-                />}
+            <div className={styles.navMenuBlock}>
+                <h1 className={styles.navMenuLogo}>{NAV_MENU.logoTitle}</h1>
+                <ul className={styles.navItems}>
+                    {NAV_MENU.menu.map(({ text, link }) =>
+                        <li className={styles.navMenuItem} key={text}>
+                            <Link href={link} className={styles.navMenuLink} scroll={false}>
+                                {text}
+                            </Link>
+                        </li>
+                    )}
+                </ul>
+                <button
+                    type="button"
+                    className={navClassButtonBurger}
+                    onClick={onBurgerClick}
+                >
+                    <span />
+                </button>
+                {isBurgerOpen
+                    &&
+                    <BurgerMenu
+                        setIsBurgerOpen={setIsBurgerOpen}
+                        setIsActive={setIsActive}
+                        scrollPosition={scrollPosition}
+                        setScrollPosition={setScrollPosition}
+                    />}
+            </div>
         </nav>
     );
 }
