@@ -1,0 +1,16 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.turningCard {
+    cursor: pointer;
+    perspective: 800px;
+    position: relative;
+    transition: all 1s;
+    transform-style: preserve-3d;
+    border-radius: 40px;
+
+    &:hover {
+        transform: rotateY(180deg);
+        background-color: $primary-text;
+    }
+}

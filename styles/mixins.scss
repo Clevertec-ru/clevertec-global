@@ -62,6 +62,14 @@
     line-height: 130%;
 }
 
+@mixin stackContent {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+
 @mixin buttonText {
     font-family: 'Rubik';
     font-size: 26px;

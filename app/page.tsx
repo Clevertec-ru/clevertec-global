@@ -4,12 +4,14 @@ import { Footer } from '../src/components/footer';
 import { NavMenu } from '../src/components/nav-menu';
 import { Header } from '../src/components/header';
 import { About } from '../src/components/about';
+import { WhatWeDo } from '../src/components/what-we-do';
 
 const Page = () => (
     <>
         <NavMenu />
         <Header />
         <About />
+        <WhatWeDo />
         <CasesSection />
         <ContactUs />
         <Footer />
