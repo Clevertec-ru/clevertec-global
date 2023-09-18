@@ -5,8 +5,8 @@ import { FrontCard } from '../turning-card/front-card';
 import styles from './what-we-do.module.scss';
 
 export const WhatWeDo = () => (
-    <section className={styles.whatWeDo}>
-        <div>
+    <section className={styles.whatWeDo} id='what-we-do'>
+        <div className={styles.whatWeDoTextBlock}>
             <h4 className={styles.whatWeDoTitle}>{WHAT_WE_DO.title}</h4>
             <p className={styles.whatWeDoText}>{WHAT_WE_DO.text}</p>
         </div>

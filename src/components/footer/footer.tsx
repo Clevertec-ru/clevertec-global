@@ -11,8 +11,8 @@ export const Footer = () => (
             <nav>
                 <ul className={styles.navContainer}>
                     {NAV_MENU.menu.map(({ text, link }) =>
-                            <li key={link}><Link href={link}>{text}</Link></li>
-                    )}  
+                        <li key={link}><Link href={link}>{text}</Link></li>
+                    )}
                 </ul>
             </nav>
             <div className={styles.footerInfo}>
