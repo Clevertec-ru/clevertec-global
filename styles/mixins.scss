@@ -1,16 +1,24 @@
 @mixin wrapper {
-    padding: 0 72px;
+    padding-left: 72px;
+    padding-right: 72px;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 
-    @media (max-width:768px) {
-        padding: 0 32px;
+    @media (max-width:1000px) {
+        padding-left: 32px;
+        padding-right: 32px;
     }
-  
-    @media (max-width:320px) {
-      padding: 0 16px;
+
+    @media (max-width:550px) {
+        padding-left: 16px;
+        padding-right: 16px;
     }
+}
+
+@mixin background_blur {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
 }
 
 @mixin blockName($color: $description-text) {
@@ -19,10 +27,10 @@
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
-    line-height: 130%; 
+    line-height: 130%;
 }
 
-@mixin blockTitle($color: $primary-text){
+@mixin blockTitle($color: $primary-text) {
     font-family: 'Rubik';
     font-size: 40px;
     font-style: normal;
@@ -31,12 +39,21 @@
 }
 
 @mixin mediumSizeContent {
-   font-size: 40px;
-   font-style: normal;
-   font-weight: 400;
-   line-height: 130%; 
-}
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
 
+    @media (max-width: 850px) {
+        font-size: 32px;
+        line-height: 120%;
+    }
+
+    @media (max-width: 460px) {
+        font-size: 24px;
+        line-height: 120%;
+    }
+}
 
 @mixin blockContent {
     font-size: 26px;
@@ -44,6 +61,14 @@
     font-weight: 400;
     line-height: 130%;
 }
+
+@mixin stackContent {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
 
 @mixin buttonText {
     font-family: 'Rubik';
@@ -58,7 +83,7 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; 
+    line-height: 130%;
 }
 
 @mixin inputError {

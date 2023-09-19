@@ -1,10 +1,31 @@
 @import '../../../styles/const.scss';
 @import '../../../styles/mixins.scss';
 
-.headerContainer{
+.header {
     @include wrapper;
-   .modalButton{
-        max-width: 312px;
-        margin: 150px auto;   // временно для проверки кнопки под модалку
-    } 
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .headerTitle {
+        font-size: 64px;
+        font-weight: 500;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    .headerText {
+        padding-top: 8px;
+        color: $description-text;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 130%;
+    }
+
+    .headerButton {
+        margin-top: 24px;
+        width: 280px;
+    }
 }

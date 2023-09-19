@@ -6,6 +6,8 @@ import { Footer } from "../footer";
 import { Header } from "../header";
 import { ModalLayout } from "../modal-layout";
 import { NavMenu } from "../nav-menu";
+import { About } from '../about';
+import { WhatWeDo } from '../what-we-do';
 
 export const MainPage = () => {
     const { addFormData, clearAndCloseForm, setModalHandler, isShowModal } = useForm();
@@ -14,6 +16,8 @@ export const MainPage = () => {
         <>
             <Header modalHandler={setModalHandler} />
             <NavMenu />
+            <About />
+            <WhatWeDo />
             <CasesSection />
             <ContactUs modalHandler={setModalHandler} />
             <Footer />
