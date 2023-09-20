@@ -3,7 +3,7 @@ const casesImagesURL = '/images/cases/';
 export enum CasesType {
   sense = 'sense',
   digitalLeasing = 'digitalLeasing',
-  ISNC = 'ISNC',
+  INSNC = 'INSNC',
 }
 
 export type CaseContent = {
@@ -29,7 +29,7 @@ export const CASES_CONTENT: CaseContent[] = [
     key: '2',
   },
   {
-    title: 'ISNC. Мобильный банк нового поколения',
+    title: 'INSNC. Мобильный банк нового поколения',
     content:
       'Помогли банку совершить переход к новому способу взаимодействия с клиентами через мобильное приложение. От стандартного банкинга с набором базовых функций к цифровому банку, в котором всё можно сделать онлайн.',
     image: `${casesImagesURL}cases-isnc.png`,
