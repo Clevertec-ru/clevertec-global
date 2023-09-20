@@ -16,7 +16,7 @@ export const ContactForm = ({ onAddData }: ContactFormProps) => {
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
-        setValues({ ...values, [name]: value });
+        setValues({ ...values, [name]: value.trimStart() });
     };
 
     const onSubmit = (e: SyntheticEvent) => {

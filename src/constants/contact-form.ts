@@ -1,3 +1,8 @@
+export enum FormErrorMessages {
+  requiredField = 'Required field',
+  validEmail = 'Please enter a valid address',
+}
+
 export const CONTACT_FORM_DATA = {
   title: 'Let’s get In Touch',
   inputs: [
@@ -5,15 +10,15 @@ export const CONTACT_FORM_DATA = {
       placeholder: 'Name',
       type: 'text',
       fieldName: 'name',
-      errorMessage: 'Required field',
+      errorMessage: FormErrorMessages.requiredField,
       isRequired: true,
       regex: /^[A-za-z\s]{2,256}$/,
     },
     {
       placeholder: 'E-mail',
-      type: 'email',
+      type: 'text',
       fieldName: 'email',
-      errorMessage: 'Please enter a valid address',
+      errorMessage: FormErrorMessages.validEmail,
       isRequired: true,
       regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
     },
