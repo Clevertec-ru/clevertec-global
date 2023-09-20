@@ -6,7 +6,7 @@ export const BackCard = ({ titleBack, stackBack }) => (
         <span className={styles.backCardTitle}>{titleBack}</span>
         <div className={styles.backCardItems}>
             {stackBack.map(({ tech, stack }) =>
-                <div className={styles.backCardItem}>
+                <div className={styles.backCardItem} key={tech}>
                     <span className={styles.backCardTech}>{tech}</span>
                     <span className={styles.backCardStack}>{stack}</span>
                 </div>

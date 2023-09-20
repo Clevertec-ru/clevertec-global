@@ -9,6 +9,7 @@ export const FrontCard = ({ text, stack, typeCard }) => (
             {stack.map((item) =>
                 <Frame
                     title={item}
+                    key={item}
                 />
             )}
         </div>

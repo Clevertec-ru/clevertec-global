@@ -46,9 +46,18 @@
         column-gap: 40px;
         z-index: 1;
 
+        @media (max-width: 1050px) {
+            column-gap: 20px;
+        }
+
         @media (max-width: 950px) {
             display: none;
         }
+    }
+
+    .navMenuButton {
+        @include navLinkText;
+        cursor: pointer;
     }
 }
 
