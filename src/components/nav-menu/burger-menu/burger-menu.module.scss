@@ -1,4 +1,5 @@
 @import '../../../../styles/const.scss';
+@import '../../../../styles/mixins.scss';
 
 .burgerMenu {
     display: grid;
@@ -32,6 +33,11 @@
     line-height: 32px;
     font-weight: 700;
     border-radius: 4px;
+}
+
+.navMenuButton {
+    @include navLinkText;
+    cursor: pointer;
 }
 
 .burgerMenuButton {

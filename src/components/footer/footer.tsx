@@ -1,17 +1,26 @@
-import Link from 'next/link';
 import { FOOTER_INFO } from '../../constants/footer';
 import { NAV_MENU } from '../../constants/nav-menu';
 import { InfoBlockWithIcon } from './info-block-with-icon';
 
 import styles from './footer.module.scss';
 
-export const Footer = () => (
+export const Footer = ({ scrollToComponent }) => (
     <footer className={styles.footerWrapper}>
         <div className={styles.footerContainer}>
             <nav>
                 <ul className={styles.navContainer}>
                     {NAV_MENU.menu.map(({ text, link }) =>
-                        <li key={link}><Link href={link}>{text}</Link></li>
+                        <li key={text}>
+                            <button
+                                className={styles.navContainerButton}
+                                type='button'
+                                onClick={() => {
+                                    scrollToComponent(text)
+                                }}
+                            >
+                                {text}
+                            </button>
+                        </li>
                     )}
                 </ul>
             </nav>

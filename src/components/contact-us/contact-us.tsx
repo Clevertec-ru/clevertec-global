@@ -1,4 +1,5 @@
-'use client'
+import { forwardRef, LegacyRef } from 'react';
+
 import { SyntheticEvent } from 'react';
 import { SectionTitles } from '../../constants/common';
 import { CONTACT_US_CONTENT, CONTACT_US_PERSONS, CONTACT_CARD } from '../../constants/contact-us';
@@ -11,8 +12,8 @@ type ContactUsProps = {
     modalHandler: (e: SyntheticEvent) => void;
 }
 
-export const ContactUs = ({ modalHandler }: ContactUsProps) => (
-    <section id='contact-us' className={styles.sectionWrapper}>
+export const ContactUs = forwardRef(({ modalHandler }: ContactUsProps, ref: LegacyRef<HTMLElement>) => (
+    <section id='contact-us' className={styles.sectionWrapper} ref={ref}>
         <div>
             <h4 className={styles.sectionTitle}>{SectionTitles.contactUs}</h4>
             <p className={styles.contactText}>{CONTACT_US_CONTENT.content}</p>
@@ -26,5 +27,4 @@ export const ContactUs = ({ modalHandler }: ContactUsProps) => (
             ))}
         </div>
     </section>
-);
-
+))

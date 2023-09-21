@@ -1,20 +1,27 @@
+export enum menuText {
+    about = 'About',
+    whatWeDo = 'What we do',
+    cases = 'Cases',
+    contactUs = 'Contact us',
+}
+
 export const NAV_MENU = {
     logoTitle: 'WislaCode Solutions',
     menu: [
         {
-            text: 'About',
+            text: menuText.about,
             link: '/#about'
         },
         {
-            text: 'What we do',
+            text: menuText.whatWeDo,
             link: '/#what-we-do'
         },
         {
-            text: 'Cases',
+            text: menuText.cases,
             link: '/#cases'
         },
         {
-            text: 'Contact us',
+            text: menuText.contactUs,
             link: '/#contact-us'
         }
     ]
