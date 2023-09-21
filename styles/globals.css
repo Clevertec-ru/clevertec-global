@@ -55,7 +55,6 @@
 *:before,
 *:after {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 /* Убираем внутренние отступы */
@@ -94,6 +93,7 @@ body {
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
+    scroll-behavior: smooth;
 }
 
 main {
