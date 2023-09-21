@@ -2,6 +2,7 @@
 import { useState } from 'react';
 
 import styles from './custom-input.module.scss';
+import { FormErrorMessages } from '../../constants/contact-form';
 
 type CustomInputProps = {
     field: {
@@ -25,17 +26,18 @@ export const CustomInput = ({ field, value, onChange, isRequired }: CustomInputP
     };
 
     const handleBlur = () => {
-        if (field.type === 'email') {
-            setIsError(!!(value && !field.regex.test(value)))
+        if (field.fieldName === 'email') {
+            setIsError(!!(value && !field.regex.test(value)|| !value))
         } else {
             setIsError(!value);
         }
         setIsActive(false);
     };
+    const isActiveLabel = (isActive && value) || !!value;
 
     return (
         <div className={styles.customFieldContainer}>
-            {(isActive && value || value) && <span className={styles.floatingLabel}>{field.placeholder}</span>}
+            {isActiveLabel && <span className={styles.floatingLabel}>{field.placeholder}</span>}
             <input
                 type={field.type}
                 placeholder={field.placeholder}

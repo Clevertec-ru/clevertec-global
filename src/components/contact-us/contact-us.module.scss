@@ -24,7 +24,10 @@
         gap: 16px;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: auto auto;
-        
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+        }  
         &:nth-child(3){
             grid-column: span 4;
         }
