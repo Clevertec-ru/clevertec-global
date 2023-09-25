@@ -20,7 +20,14 @@ type CustomInputProps = {
 export const CustomInput = ({ field, value, onChange, isRequired }: CustomInputProps) => {
     const [isActive, setIsActive] = useState(false);
     const [isError, setIsError] = useState(false);
-
+    
+    const isActiveLabel = (isActive && value) || !!value;
+    const errorMessageVariant = !value ? FormErrorMessages.requiredField : field.errorMessage;
+    const errorMessage = {
+        email: errorMessageVariant,
+        name: field.errorMessage
+    }
+    
     const handleFocus = () => {
         setIsActive(true);
     };
@@ -33,7 +40,6 @@ export const CustomInput = ({ field, value, onChange, isRequired }: CustomInputP
         }
         setIsActive(false);
     };
-    const isActiveLabel = (isActive && value) || !!value;
 
     return (
         <div className={styles.customFieldContainer}>
@@ -49,7 +55,7 @@ export const CustomInput = ({ field, value, onChange, isRequired }: CustomInputP
                 onBlur={handleBlur}
                 required={isRequired}
             />
-            {isError && <p className={styles.errorMessage}>{field.errorMessage}</p>}
+            {isError && <p className={styles.errorMessage}>{errorMessage[field.fieldName]}</p>}
         </div>
     )
 };

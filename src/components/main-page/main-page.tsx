@@ -13,7 +13,7 @@ import { WhatWeDo } from '../what-we-do';
 import { menuText } from '../../constants/nav-menu';
 
 export const MainPage = () => {
-    const { addFormData, clearAndCloseForm, setModalHandler, isShowModal } = useForm();
+    const { addFormData, clearAndCloseForm, setModalHandler, isShowModal, isLoading } = useForm();
 
     const aboutRef = useRef<HTMLDivElement>(null);
     const whatWeDoRef = useRef<HTMLDivElement>(null);
@@ -58,7 +58,12 @@ export const MainPage = () => {
             <CasesSection ref={casesRef} />
             <ContactUs modalHandler={setModalHandler} ref={contactUsRef} />
             <Footer scrollToComponent={scrollToComponent}/>
-            <ModalLayout isShow={isShowModal} onAddDataHandler={addFormData} onCloseHandler={clearAndCloseForm} />
+            <ModalLayout
+                isShow={isShowModal}
+                onAddDataHandler={addFormData}
+                onCloseHandler={clearAndCloseForm}
+                isLoading={isLoading}
+            />
         </>
     )
 };

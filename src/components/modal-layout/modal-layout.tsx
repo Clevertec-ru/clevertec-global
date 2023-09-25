@@ -11,10 +11,11 @@ type ModalLayoutType = {
     isShow: boolean;
     onAddDataHandler: (values: ContactDataProps) => void;
     onCloseHandler: () => void;
+    isLoading: boolean;
 
 }
 
-export const ModalLayout = ({ isShow, onAddDataHandler, onCloseHandler }: ModalLayoutType) => {
+export const ModalLayout = ({ isShow, isLoading, onAddDataHandler, onCloseHandler }: ModalLayoutType) => {
     if (!isShow) return null;
 
     const handleOverlayClick = (e: SyntheticEvent) => {
@@ -31,7 +32,10 @@ export const ModalLayout = ({ isShow, onAddDataHandler, onCloseHandler }: ModalL
     return (
         <div className={containerStyles} onClick={handleOverlayClick} >
             <Modal closeHandler={onCloseHandler}>
-                <ContactForm onAddData={onAddDataHandler} />
+                <ContactForm
+                    onAddData={onAddDataHandler}
+                    isLoading={isLoading}
+                />
             </Modal>
         </div>
     );

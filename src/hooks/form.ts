@@ -21,5 +21,5 @@ export const useForm = () => {
     dispatch(contactUsClear());
   };
 
-  return { isShowModal: state.isShowModal, addFormData, setModalHandler, clearAndCloseForm };
+  return { isShowModal: state.isShowModal, isLoading: state.isLoading, addFormData, setModalHandler, clearAndCloseForm };
 };
