@@ -29,6 +29,7 @@
         @include inputPlaceholder;
         &::placeholder{
             color: $primary-text;
+            opacity: 1;
         }
     }
 }

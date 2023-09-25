@@ -7,7 +7,7 @@ export const CONTACT_FORM_DATA = {
   title: 'Let’s get In Touch',
   inputs: [
     {
-      placeholder: 'Name',
+      placeholder: 'Name*',
       type: 'text',
       fieldName: 'name',
       errorMessage: FormErrorMessages.requiredField,
@@ -15,7 +15,7 @@ export const CONTACT_FORM_DATA = {
       regex: /^[A-za-z\s]{2,256}$/,
     },
     {
-      placeholder: 'E-mail',
+      placeholder: 'E-mail*',
       type: 'text',
       fieldName: 'email',
       errorMessage: FormErrorMessages.validEmail,
