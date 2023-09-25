@@ -1,5 +1,5 @@
 export enum SectionTitles {
-  cases = 'Cases',
+  cases = 'Cases Studies',
   contactUs = 'Contact us',
   weDo = 'What we do',
 }

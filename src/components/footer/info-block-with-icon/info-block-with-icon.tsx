@@ -20,6 +20,6 @@ export const InfoBlockWithIcon = ({ icon, text, contactType }: InfoBlockWithIcon
                 priority
             />
         </div>
-        <p>{text}</p>
+        <p className={styles.infoContainerText}>{text}</p>
     </div >
 );

@@ -6,7 +6,7 @@ import { CasesTextBlock } from './components/cases-text-block';
 
 import styles from './cases-section.module.scss';
 
-export const CasesSection = forwardRef((orios, ref: LegacyRef<HTMLElement>) => (
+export const CasesSection = forwardRef((props, ref: LegacyRef<HTMLElement>) => (
     <section id='cases' ref={ref}>
         {CASES_CONTENT.map((caseVariant) => (
             <div key={caseVariant.key} className={styles.sectionWrapper}>
