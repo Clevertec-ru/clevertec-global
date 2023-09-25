@@ -1,15 +1,15 @@
 'use client';
 import classNames from 'classnames';
 import { useAnimation, motion } from 'framer-motion';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, LegacyRef, forwardRef } from 'react';
 import { CASES_CONTENT } from '../../constants/cases';
-import { NavSections } from '../../constants/nav-menu';
+import { SectionVariants } from '../../constants/nav-menu';
 import { scrollToNextSection } from '../../utils/scroll-to-next-section';
 import { CasesTextBlock } from './cases-text-block';
 
 import styles from './cases-slider.module.scss';
 
-export const CasesSlider = () => {
+export const CasesSlider = forwardRef((props, ref: LegacyRef<HTMLElement>) => {
     const [isSliderVisible, setIsSliderVisible] = useState(false);
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [slideHeight, setSlideHeight] = useState<number | undefined>();
@@ -63,12 +63,12 @@ export const CasesSlider = () => {
 
     const scrollToSection = (e: React.WheelEvent<HTMLDivElement>) => {
         if (e.deltaY < 0 && activeSlideIndex === 0) {
-            const prevSection = document.getElementById(NavSections.whatWeDo);
+            const prevSection = document.getElementById(SectionVariants.whatWeDo);
             setIsSliderVisible(false);
             prevSection && scrollToNextSection(prevSection);
         }
         if (e.deltaY > 0 && activeSlideIndex === CASES_CONTENT.length - 1) {
-            const nextSection = document.getElementById(NavSections.contactUs);
+            const nextSection = document.getElementById(SectionVariants.contactUs);
             setIsSliderVisible(false);
             nextSection && scrollToNextSection(nextSection);
         }
@@ -85,37 +85,38 @@ export const CasesSlider = () => {
     const translateY = activeSlideIndex * slideHeight!;
 
     return (
-        <motion.section
-            className={stickyClass}
-            id={NavSections.cases}
-            ref={sliderContainerRef}
-            initial={{ opacity: 0.5 }}
-            onWheel={handleMouseWheel}
-            animate={controls}
-        >
-            <div className={styles.leftSection}>
+        <section className={stickyClass}id={SectionVariants.cases} ref={ref} >
+            <motion.div
+                className={stickyClass}
+                ref={sliderContainerRef}
+                initial={{ opacity: 0.5 }}
+                onWheel={handleMouseWheel}
+                animate={controls}
+            >
+                <div className={styles.leftSection}>
+                    <motion.div
+                        className={styles.leftSlide}
+                        style={{
+                            y: -translateY,
+                        }}
+                    >
+                        {CASES_CONTENT.map((slide, index) => (
+                            <CasesTextBlock key={index} title={slide.title} content={slide.content} />
+                        ))}
+                    </motion.div>
+                </div>
                 <motion.div
-                    className={styles.leftSlide}
+                    className={styles.rightSlide}
                     style={{
-                        y: -translateY,
+                        top: `-${(CASES_CONTENT.length - 1) * 100}vh`,
+                        y: translateY,
                     }}
                 >
                     {CASES_CONTENT.map((slide, index) => (
-                        <CasesTextBlock key={index} title={slide.title} content={slide.content} />
+                        <div key={index} style={{ backgroundImage: `url('${slide.image}')` }} />
                     ))}
                 </motion.div>
-            </div>
-            <motion.div
-                className={styles.rightSlide}
-                style={{
-                    top: `-${(CASES_CONTENT.length - 1) * 100}vh`,
-                    y: translateY,
-                }}
-            >
-                {CASES_CONTENT.map((slide, index) => (
-                    <div key={index} style={{ backgroundImage: `url('${slide.image}')` }} />
-                ))}
             </motion.div>
-        </motion.section>
+        </section>
     );
-};
+});

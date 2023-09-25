@@ -7,16 +7,17 @@ import { PrimaryButton } from '../primary-button';
 import styles from './contact-form.module.scss';
 
 type ContactFormProps = {
-    onAddData: (values) => void
+    onAddData: (values) => void;
+    isLoading: boolean;
 }
 
-export const ContactForm = ({ onAddData }: ContactFormProps) => {
+export const ContactForm = ({ onAddData, isLoading }: ContactFormProps) => {
     const [values, setValues] = useState<ContactDataProps>(INITIAL_FORM_VALUE);
     const [isDisabled, setIsDisabled] = useState(true);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
-        setValues({ ...values, [name]: value });
+        setValues({ ...values, [name]: value.trimStart() });
     };
 
     const onSubmit = (e: SyntheticEvent) => {
@@ -32,7 +33,7 @@ export const ContactForm = ({ onAddData }: ContactFormProps) => {
             setIsDisabled(true);
         }
     }, [values])
-
+    
     return (
         <form className={styles.contactFormContainer} onSubmit={onSubmit}>
             <h4 className={styles.contactFormTitle}>{CONTACT_FORM_DATA.title}</h4>
@@ -54,7 +55,11 @@ export const ContactForm = ({ onAddData }: ContactFormProps) => {
                     onChange={handleInputChange}
                 />
             </div>
-            <PrimaryButton text={CONTACT_FORM_DATA.submitButton} type='submit' disabled={isDisabled} />
+            <PrimaryButton
+                text={CONTACT_FORM_DATA.submitButton}
+                type='submit'
+                disabled={isDisabled || isLoading}
+            />
         </form>
     )
 };

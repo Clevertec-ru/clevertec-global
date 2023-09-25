@@ -4,7 +4,7 @@
 .footerWrapper {
     background-color: $primary-text;
 
-    .footerContainer{
+    .footerContainer {
         @include wrapper;
         font-family: 'Rubik';
         color: $white;
@@ -13,26 +13,29 @@
         display: flex;
         gap: 150px;
 
-        .navContainer{
+        .navContainer {
             display: flex;
             flex-direction: column;
             gap: 16px;
-            a { 
+
+            button {
                 @include blockName($white);
+                cursor: pointer;
+                text-align: start;
             }
         }
 
-        .infoWithIcon{
+        .infoWithIcon {
             display: flex;
             flex-direction: column;
             gap: 24px;
         }
-        
-        .footerTitle{
+
+        .footerTitle {
             @include blockTitle($white);
             text-transform: uppercase;
             margin-bottom: 56px;
         }
     }
-    
+
 }

@@ -10,6 +10,7 @@
     border: 2px solid $primary-text;
     color: $primary-text;
     border-radius: 40px;
+    @include buttonText;
 }
 
 .frameBlack {

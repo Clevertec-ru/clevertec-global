@@ -2,6 +2,7 @@
 import { useState } from 'react';
 
 import styles from './custom-input.module.scss';
+import { FormErrorMessages } from '../../constants/contact-form';
 
 type CustomInputProps = {
     field: {
@@ -19,14 +20,21 @@ type CustomInputProps = {
 export const CustomInput = ({ field, value, onChange, isRequired }: CustomInputProps) => {
     const [isActive, setIsActive] = useState(false);
     const [isError, setIsError] = useState(false);
-
+    
+    const isActiveLabel = (isActive && value) || !!value;
+    const errorMessageVariant = !value ? FormErrorMessages.requiredField : field.errorMessage;
+    const errorMessage = {
+        email: errorMessageVariant,
+        name: field.errorMessage
+    }
+    
     const handleFocus = () => {
         setIsActive(true);
     };
 
     const handleBlur = () => {
-        if (field.type === 'email') {
-            setIsError(!!(value && !field.regex.test(value)))
+        if (field.fieldName === 'email') {
+            setIsError(!!(value && !field.regex.test(value)|| !value))
         } else {
             setIsError(!value);
         }
@@ -35,7 +43,7 @@ export const CustomInput = ({ field, value, onChange, isRequired }: CustomInputP
 
     return (
         <div className={styles.customFieldContainer}>
-            {(isActive && value || value) && <span className={styles.floatingLabel}>{field.placeholder}</span>}
+            {isActiveLabel && <span className={styles.floatingLabel}>{field.placeholder}</span>}
             <input
                 type={field.type}
                 placeholder={field.placeholder}
@@ -47,7 +55,7 @@ export const CustomInput = ({ field, value, onChange, isRequired }: CustomInputP
                 onBlur={handleBlur}
                 required={isRequired}
             />
-            {isError && <p className={styles.errorMessage}>{field.errorMessage}</p>}
+            {isError && <p className={styles.errorMessage}>{errorMessage[field.fieldName]}</p>}
         </div>
     )
 };

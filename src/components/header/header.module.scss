@@ -9,9 +9,7 @@
     align-items: center;
 
     .headerTitle {
-        font-size: 64px;
-        font-weight: 500;
-        line-height: 130%;
+        @include headerTitle;
         text-align: center;
     }
 

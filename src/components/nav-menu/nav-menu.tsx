@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import classNames from 'classnames';
 
 import { BurgerMenu } from './burger-menu';
@@ -23,7 +22,7 @@ type PositionType = {
     };
 }
 
-export const NavMenu = () => {
+export const NavMenu = ({ scrollToComponent }) => {
     const [isScroll, setIsScroll] = useState(false);
     const [sticky, setSticky] = useState(false);
     const [isDisplayNav, setIsDisplayNav] = useState(false);
@@ -92,11 +91,17 @@ export const NavMenu = () => {
             <div className={styles.navMenuBlock}>
                 <h1 className={styles.navMenuLogo}>{NAV_MENU.logoTitle}</h1>
                 <ul className={styles.navItems}>
-                    {NAV_MENU.menu.map(({ text, link }) =>
+                    {NAV_MENU.menu.map(({ text }) =>
                         <li className={styles.navMenuItem} key={text}>
-                            <Link href={link} className={styles.navMenuLink} scroll={false}>
+                            <button
+                                className={styles.navMenuButton}
+                                type='button'
+                                onClick={() => {
+                                    scrollToComponent(text)
+                                }}
+                            >
                                 {text}
-                            </Link>
+                            </button>
                         </li>
                     )}
                 </ul>
@@ -114,6 +119,7 @@ export const NavMenu = () => {
                         setIsActive={setIsActive}
                         scrollPosition={scrollPosition}
                         setScrollPosition={setScrollPosition}
+                        scrollToComponent={scrollToComponent}
                     />}
             </div>
         </nav>
