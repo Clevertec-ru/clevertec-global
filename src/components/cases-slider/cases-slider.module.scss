@@ -1,0 +1,51 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.sliderContainer {
+    position: relative;
+    width: calc(100vw - 8px);
+    height: 100vh;
+    overflow: hidden;
+
+    .leftSection {
+        width: 100%;
+        height: 100%;
+        @include wrapper;
+        .leftSlide {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            transition: transform 1s ease-in-out;
+            div {
+                width: 100%;
+                height: 100%;
+                padding-right: 16px;
+            }
+        }
+    }
+
+    .rightSlide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 50%;
+        transition: transform 1s ease-in-out;
+        div {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+.sticky {
+    position: sticky;
+    background-color: $white;
+    z-index: 100;
+    top: 0;
+}

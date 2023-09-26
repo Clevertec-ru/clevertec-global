@@ -5,24 +5,32 @@ export enum menuText {
     contactUs = 'Contact us',
 }
 
+export enum SectionVariants {
+    about='about',
+    whatWeDo='what-we-do',
+    cases = 'cases',
+    contactUs = 'contact-us'
+
+}
+
 export const NAV_MENU = {
     logoTitle: 'WislaCode Solutions',
     menu: [
         {
             text: menuText.about,
-            link: '/#about'
+            link: `/#${SectionVariants.about}`
         },
         {
             text: menuText.whatWeDo,
-            link: '/#what-we-do'
+            link: `/#${SectionVariants.whatWeDo}`
         },
         {
             text: menuText.cases,
-            link: '/#cases'
+            link: `/#${SectionVariants.cases}`
         },
         {
             text: menuText.contactUs,
-            link: '/#contact-us'
+            link: `/#${SectionVariants.contactUs}`
         }
     ]
 }
