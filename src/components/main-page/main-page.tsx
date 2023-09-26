@@ -1,16 +1,17 @@
 'use client'
-import { useRef } from 'react';
 
+import { useRef } from "react";
+import { menuText } from "../../constants/nav-menu";
 import { useForm } from "../../hooks/form";
-import { CasesSection } from "../cases-section";
+import { About } from "../about";
+import { CasesSlider } from "../cases-slider";
 import { ContactUs } from "../contact-us";
 import { Footer } from "../footer";
 import { Header } from "../header";
 import { ModalLayout } from "../modal-layout";
 import { NavMenu } from "../nav-menu";
-import { About } from '../about';
-import { WhatWeDo } from '../what-we-do';
-import { menuText } from '../../constants/nav-menu';
+import { WhatWeDo } from "../what-we-do";
+
 
 export const MainPage = () => {
     const { addFormData, clearAndCloseForm, setModalHandler, isShowModal, isLoading } = useForm();
@@ -55,7 +56,7 @@ export const MainPage = () => {
             />
             <About ref={aboutRef} />
             <WhatWeDo ref={whatWeDoRef} />
-            <CasesSection ref={casesRef} />
+            <CasesSlider ref={casesRef} />
             <ContactUs modalHandler={setModalHandler} ref={contactUsRef} />
             <Footer scrollToComponent={scrollToComponent}/>
             <ModalLayout
@@ -65,5 +66,5 @@ export const MainPage = () => {
                 isLoading={isLoading}
             />
         </>
-    )
+    );
 };
