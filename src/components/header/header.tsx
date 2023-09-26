@@ -12,7 +12,8 @@ type HeaderProps = {
 export const Header = ({ modalHandler }: HeaderProps) => (
     <header className={styles.header}>
         <h2 className={styles.headerTitle}>Next-Generation Fintech</h2>
-        <p className={styles.headerText}>Transform your digital landscape with WislaCode Solutions. Rely on a strong team to develop strong apps.</p>
+        <p className={styles.headerText}>Transform your digital landscape with WislaCode Solutions.</p>
+        <p className={styles.headerText}>Rely on a strong team to develop strong apps.</p>
         <div className={styles.headerButton}>
             <PrimaryButton text='Get in touch' type='button' handler={modalHandler} />
         </div>

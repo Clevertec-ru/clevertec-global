@@ -1,5 +1,5 @@
 export enum menuText {
-    about = 'About',
+    about = 'About us',
     whatWeDo = 'What we do',
     cases = 'Cases',
     contactUs = 'Contact us',
