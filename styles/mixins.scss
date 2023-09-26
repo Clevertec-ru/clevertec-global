@@ -30,12 +30,31 @@
     line-height: 130%;
 }
 
+@mixin footerBlockName($color: $description-text) {
+    font-family: 'Rubik';
+    color: $color;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    @media (max-width:1100px) {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 130%;
+    }
+}
+
 @mixin headerTitle {
     font-family: 'Rubik';
     font-size: 64px;
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
+
+    @media (max-width:400px) {
+        font-size: 40px;
+    }
 }
 
 @mixin blockTitle($color: $primary-text) {
@@ -68,6 +87,16 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+
+    @media (max-width: 470px) {
+        font-size: 22px;
+        line-height: 120%;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 20px;
+        line-height: 110%;
+    }
 }
 
 @mixin stackContent {

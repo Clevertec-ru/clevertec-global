@@ -1,30 +1,87 @@
 @import '../../../../../styles/const.scss';
 @import '../../../../../styles/mixins.scss';
 
-.sectionWrapper{
+.sectionWrapper {
     @include lightCard(32px, 32px, 20px);
     grid-column: span 3;
     transition: all 0.5s ease-in-out;
-    .avatarContainer{
+    cursor: pointer;
+    min-height: 380px;
+
+    @media (max-width: 1420px) {
+        min-height: 420px;
+    }
+
+    @media (max-width: 1310px) {
+        min-height: 440px;
+    }
+
+    @media (max-width: 1190px) {
+        min-height: 530px;
+    }
+
+    @media (max-width: 1110px) {
+        min-height: 560px;
+    }
+
+    @media (max-width: 1060px) {
+        min-height: 600px;
+    }
+
+    @media (max-width: 1024px) {
+        min-height: 360px;
+    }
+
+    @media (max-width: 760px) {
+        min-height: 380px;
+    }
+
+    @media (max-width: 700px) {
+        min-height: 420px;
+    }
+
+    @media (max-width: 650px) {
+        min-height: 450px;
+    }
+
+    @media (max-width: 590px) {
+        min-height: 530px;
+    }
+
+    @media (max-width: 520px) {
+        min-height: 600px;
+    }
+
+    @media (max-width: 470px) {
+        @include lightCard(24px, 24px, 16px);
+        min-height: 500px;
+    }
+
+    .avatarContainer {
         position: relative;
         width: 136px;
         height: 136px;
         border-radius: 50%;
         overflow: hidden;
     }
-    .cardTitle{
+
+    .cardTitle {
         @include blockTitle
     }
-    .cardInfo{
+
+    .cardInfo {
         @include blockContent
     }
+
     &:hover {
-        background-color: $primary-text; 
+        background-color: $primary-text;
+
         .cardTitle {
-          color: $white; 
+            color: $white;
         }
+
         .cardInfo {
-          color: $white; 
+            color: $white;
         }
-      }
     }
+}

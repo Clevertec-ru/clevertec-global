@@ -26,4 +26,33 @@
         margin-top: 24px;
         width: 280px;
     }
+
+    .headerImage {
+        margin-top: 40px;
+        position: relative;
+        max-width: 1296px;
+        max-height: 693px;
+        width: calc(100vw - 144px - 8px);
+        height: 48vw;
+
+        @media (max-width:1000px) {
+            width: calc(100vw - 64px - 8px);
+        }
+
+        @media (max-width:550px) {
+            width: calc(100vw - 32px - 8px);
+            order: -1;
+            margin-top: 0;
+        }
+
+        @media (max-width:400px) {
+            height: 123vw;
+            max-height: 420px;
+        }
+
+        .headerImg {
+            object-fit: cover;
+            border-radius: 24px;
+        }
+    }
 }
