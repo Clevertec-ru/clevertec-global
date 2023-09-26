@@ -7,9 +7,9 @@ import styles from './footer.module.scss';
 export const Footer = ({ scrollToComponent }) => (
     <footer className={styles.footerWrapper}>
         <div className={styles.footerContainer}>
-            <nav>
+            <nav className={styles.footerNavContainer}>
                 <ul className={styles.navContainer}>
-                    {NAV_MENU.menu.map(({ text, link }) =>
+                    {NAV_MENU.menu.map(({ text }) =>
                         <li key={text}>
                             <button
                                 className={styles.navContainerButton}
@@ -24,13 +24,11 @@ export const Footer = ({ scrollToComponent }) => (
                     )}
                 </ul>
             </nav>
-            <div className={styles.footerInfo}>
-                <h4 className={styles.footerTitle}>{FOOTER_INFO.title}</h4>
-                <div className={styles.infoWithIcon}>
-                    {FOOTER_INFO.content.map(({ contactType, text, icon }) => (
-                        <InfoBlockWithIcon key={contactType} icon={icon} text={text} contactType={contactType} />
-                    ))}
-                </div>
+            <h4 className={styles.footerTitle}>{FOOTER_INFO.title}</h4>
+            <div className={styles.infoWithIcon}>
+                {FOOTER_INFO.content.map(({ contactType, text, icon }) => (
+                    <InfoBlockWithIcon key={contactType} icon={icon} text={text} contactType={contactType} />
+                ))}
             </div>
         </div>
 

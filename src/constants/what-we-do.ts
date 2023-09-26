@@ -1,9 +1,9 @@
 export const WHAT_WE_DO = {
     title: 'What we do',
-    text: 'Разрабатываем высоконагруженные приложения с нуля или подключаемся к проекту, чтобы усилить команду.',
+    text: 'We build high-performance applications from scratch and augment existing projectteams.',
     turningCards: [
         {
-            textFront: 'Нативные мобильные приложения для миллионов пользователей. Интегрируем в приложения сторонние API любой сложности.',
+            textFront: 'Catering native mobile applications for millions of users. Seamless integration of complex third-party APIs. Our solutions consistently reach the top of international rankings.',
             stackFront: [
                 'Android',
                 'iOS'
@@ -21,7 +21,7 @@ export const WHAT_WE_DO = {
             ]
         },
         {
-            textFront: 'Масштабируемые веб-приложения с микросервисной архитектурой. На этапе разработки создаем it-ландшафт для будущего развития вашего проекта.',
+            textFront: 'Scalable web applications with microservices architecture. We create IT landscape for your project`s future scalability.',
             stackFront: [
                 'Backend',
                 'Frontend'
@@ -41,7 +41,7 @@ export const WHAT_WE_DO = {
     ],
     cards: [
         {
-            text: 'Продумываем до мелочей и реализуем сложный дизайн для впечатляющего пользовательского опыта',
+            text: 'Carefully planned and executed designs for a great user experience.',
             stack: [
                 'UX Research',
                 'Prototyping',
@@ -50,7 +50,7 @@ export const WHAT_WE_DO = {
             ],
         },
         {
-            text: 'Глубоко изучаем процессы и работаем с требованиями.',
+            text: 'We go thoroughly into the processes handling requirements.',
             stack: [
                 'System Analytics'
             ],
