@@ -44,7 +44,7 @@ export const CONTACT_CARD = [
     {
         title: 'Email',
         contactType: ContactVariant.email,
-        content: 'info@clevernova.dev',
+        content: 'info@wislacode.com',
         key: 2,
     },
 ];
