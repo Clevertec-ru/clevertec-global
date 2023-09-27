@@ -1,5 +1,4 @@
 'use client'
-
 import { useRef } from "react";
 import { menuText } from "../../constants/nav-menu";
 import { useForm } from "../../hooks/form";
@@ -11,7 +10,6 @@ import { Header } from "../header";
 import { ModalLayout } from "../modal-layout";
 import { NavMenu } from "../nav-menu";
 import { WhatWeDo } from "../what-we-do";
-
 
 export const MainPage = () => {
     const { addFormData, clearAndCloseForm, setModalHandler, isShowModal, isLoading } = useForm();

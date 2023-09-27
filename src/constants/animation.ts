@@ -3,6 +3,16 @@ enum AnimateVariant {
     visible = 'visible',
 }
 
+const SECTION_TITLE_ANIMATION_VARIANT = {
+    [AnimateVariant.hidden]: {
+        opacity: 0,
+    },
+    [AnimateVariant.visible]: {
+        opacity: 1,
+        transition: { delay: 0.3 },
+    },
+};
+
 const ANIMATE_TITLE_VARIANT = {
     [AnimateVariant.hidden]: {
         opacity: 0,
@@ -20,3 +30,13 @@ export const TITLE_ANIMATION_PROPS = {
     initial: AnimateVariant.hidden,
     whileInView: AnimateVariant.visible,
 };
+
+export const SECTION_TITLE_ANIMATION_PROPS = {
+    variants: SECTION_TITLE_ANIMATION_VARIANT,
+    initial: AnimateVariant.hidden,
+    whileInView: AnimateVariant.visible,
+    exit: AnimateVariant.hidden,
+};
+
+export const CASES_SCROLL_OPTIONS_OFFSET_START = '0.7';
+export const HEIGHT_TRANSFORM_VALUES = ['0%', '100%'];

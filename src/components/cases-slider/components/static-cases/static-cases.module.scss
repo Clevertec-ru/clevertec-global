@@ -1,0 +1,19 @@
+.casesVariants {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    .isTabletCase {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .mainImage {
+        position: relative;
+        width: 50%;
+        height: 60vw;
+        max-height: 415px;
+        margin: 0 auto;
+    }
+}

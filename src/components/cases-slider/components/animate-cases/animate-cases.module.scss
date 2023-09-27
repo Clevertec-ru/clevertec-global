@@ -1,0 +1,26 @@
+.rightSection {
+    position: sticky;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    .imageWrapper {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+
+        .mainImage {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: height 0.1s ease;
+        }
+    }
+}
