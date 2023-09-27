@@ -1,0 +1,15 @@
+@import '../../../styles/const.scss';
+@import '../../../styles/mixins.scss';
+
+.textAreaWrapper {
+    position: relative;
+
+    .contactFormTextArea {
+        @include customFieldSetting;
+        resize: none;
+    }
+
+    .floatingLabel {
+        @include floatingLabel;
+    }
+}
