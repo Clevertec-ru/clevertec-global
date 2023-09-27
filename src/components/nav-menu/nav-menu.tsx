@@ -9,6 +9,8 @@ import { NAV_MENU } from '../../constants/nav-menu';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { onSetBodyStyle } from '../../utils/set-body-style';
 
+import Logo from '../../../public/images/logo/logo.svg'
+
 import styles from './nav-menu.module.scss';
 
 type PositionType = {
@@ -89,7 +91,7 @@ export const NavMenu = ({ scrollToComponent }) => {
     return (
         <nav className={navClass}>
             <div className={styles.navMenuBlock}>
-                <h1 className={styles.navMenuLogo}>{NAV_MENU.logoTitle}</h1>
+                <h1 className={styles.navMenuLogo}><Logo/></h1>
                 <ul className={styles.navItems}>
                     {NAV_MENU.menu.map(({ text }) =>
                         <li className={styles.navMenuItem} key={text}>

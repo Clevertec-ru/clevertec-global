@@ -23,10 +23,6 @@
 
 
     .navMenuLogo {
-        @include navLinkText;
-        color: $primary-text;
-        text-transform: uppercase;
-        white-space: nowrap;
         cursor: default;
         user-select: none;
 
@@ -44,11 +40,11 @@
         column-gap: 40px;
         z-index: 1;
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1150px) {
             column-gap: 20px;
         }
 
-        @media (max-width: 950px) {
+        @media (max-width: 990px) {
             display: none;
         }
     }
@@ -98,7 +94,7 @@
     top: 0;
 
 
-    @media all and (max-width: 950px) {
+    @media all and (max-width: 990px) {
         display: grid;
     }
 }
