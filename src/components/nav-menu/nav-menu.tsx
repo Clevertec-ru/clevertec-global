@@ -3,13 +3,15 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 import { BurgerMenu } from './burger-menu';
-
+import { TABLET_WIDTH } from '../../constants/common';
 import { NAV_MENU } from '../../constants/nav-menu';
 
 import { useScrollPosition } from '../../hooks/useScrollPosition';
+import { useWindowWidth } from '../../hooks/window-width';
 import { onSetBodyStyle } from '../../utils/set-body-style';
 
 import Logo from '../../../public/images/logo/logo.svg'
+import LogoMobile from '../../../public/images/logo/logoMobile.svg'
 
 import styles from './nav-menu.module.scss';
 
@@ -32,6 +34,7 @@ export const NavMenu = ({ scrollToComponent }) => {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
+    const {isDevice: isTablet} = useWindowWidth(TABLET_WIDTH);
 
     useScrollPosition(
         ({ prevPos, currPos }: PositionType) => {
@@ -88,10 +91,11 @@ export const NavMenu = ({ scrollToComponent }) => {
         [styles.open]: isBurgerOpen && !isActive,
         [styles.submenu__active]: isActive,
     });
+
     return (
         <nav className={navClass}>
             <div className={styles.navMenuBlock}>
-                <h1 className={styles.navMenuLogo}><Logo/></h1>
+                <h1 className={styles.navMenuLogo}>{isTablet ? <LogoMobile/> : <Logo/> }</h1>
                 <ul className={styles.navItems}>
                     {NAV_MENU.menu.map(({ text }) =>
                         <li className={styles.navMenuItem} key={text}>

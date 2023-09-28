@@ -1,44 +1,56 @@
 @import '../../../styles/const.scss';
 @import '../../../styles/mixins.scss';
 
-.sliderContainer {
+.sectionWrapper {
     position: relative;
     width: calc(100vw - 8px);
-    height: 100vh;
-    overflow: hidden;
 
-    .leftSection {
-        width: 100%;
-        height: 100%;
-        @include wrapper;
-        .leftSlide {
+    .rightSection {
+        position: sticky;
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+
+        .imageWrapper {
             position: relative;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 100%;
-            transition: transform 1s ease-in-out;
-            div {
-                width: 100%;
-                height: 100%;
-                padding-right: 16px;
+            height: 100vh;
+            overflow: hidden;
+
+            .mainImage {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 10;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: height 0.1s ease;
             }
         }
     }
-
-    .rightSlide {
-        position: absolute;
+    .sectionTitleWrapper {
+        @include wrapper;
+        position: sticky;
         top: 0;
-        left: 50%;
-        height: 100%;
-        width: 50%;
-        transition: transform 1s ease-in-out;
-        div {
-            width: 100%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+        left: 0;
+        z-index: 1;
+        @media (max-width: 768px) {
+            position: relative;
+        }
+
+        .casesTitle {
+            @include blockName;
+            width: 50%;
+            padding-top: 90px;
+            background: linear-gradient(180deg, rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0.2));
+            @media (max-width: 768px) {
+                width: 100%;
+                padding-top: 0;
+                margin-bottom: 24px;
+            }
         }
     }
 }
