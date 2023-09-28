@@ -11,9 +11,16 @@
 
     .mainImage {
         position: relative;
-        width: 50%;
-        height: 60vw;
-        max-height: 415px;
+        border-radius: 24px;
+        overflow: hidden;
+        width: 93vw;
+        height: 100vw;
         margin: 0 auto;
+        max-width: 358px;
+        max-height: 382px;
+
+        img {
+            object-fit: cover;
+        }
     }
 }
