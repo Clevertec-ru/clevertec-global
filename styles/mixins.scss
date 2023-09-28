@@ -5,12 +5,12 @@
     width: 100%;
     margin: 0 auto;
 
-    @media (max-width:1000px) {
+    @media (max-width: 1000px) {
         padding-left: 32px;
         padding-right: 32px;
     }
 
-    @media (max-width:550px) {
+    @media (max-width: 550px) {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -38,7 +38,7 @@
     font-weight: 500;
     line-height: 130%;
 
-    @media (max-width:1100px) {
+    @media (max-width: 1100px) {
         font-size: 26px;
         font-weight: 400;
         line-height: 130%;
@@ -52,7 +52,7 @@
     font-weight: 500;
     line-height: 130%;
 
-    @media (max-width:400px) {
+    @media (max-width: 400px) {
         font-size: 40px;
     }
 }
@@ -99,6 +99,17 @@
     }
 }
 
+@mixin formTitle {
+    font-family: 'Rubik';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    @media (max-width: 850px) {
+        font-size: 28px;
+    }
+}
+
 @mixin stackContent {
     font-size: 26px;
     font-style: normal;
@@ -114,13 +125,15 @@
     line-height: 130%;
 }
 
-
 @mixin buttonText {
     font-family: 'Rubik';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
+    @media (max-width: 850px) {
+        font-size: 20px;
+    }
 }
 
 @mixin inputPlaceholder {
@@ -129,6 +142,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+    @media (max-width: 850px) {
+        font-size: 20px;
+    }
 }
 
 @mixin inputError {
@@ -147,4 +163,34 @@
     gap: $gap;
     display: flex;
     flex-direction: column;
+}
+
+@mixin customFieldSetting {
+    border: 1px solid $primary-text;
+    border-radius: 24px;
+    padding: 16px 24px;
+    width: 100%;
+    outline: none;
+    @include inputPlaceholder;
+    @media (max-width: 400px) {
+        padding: 16px 12px;
+    }
+    &::placeholder {
+        color: $primary-text;
+        opacity: 1;
+    }
+}
+
+@mixin floatingLabel {
+    position: absolute;
+    top: 2px;
+    left: 25px;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    @media (max-width: 400px) {
+        left: 14px;
+    }
 }
