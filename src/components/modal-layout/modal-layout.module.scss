@@ -1,7 +1,7 @@
 @import '../../../styles/const.scss';
 @import '../../../styles/mixins.scss';
 
-.overlay{
+.overlay {
     z-index: 100;
     display: none;
     justify-content: center;
@@ -11,15 +11,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 1000;
     height: 100vh;
     background-color: $overlay;
 }
 
-.displayOverlay{
+.displayOverlay {
     display: flex;
 }
 
-body:has(.displayOverlay){
+body:has(.displayOverlay) {
     overflow-y: hidden;
 }

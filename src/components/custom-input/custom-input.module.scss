@@ -1,38 +1,19 @@
 @import '../../../styles/const.scss';
 @import '../../../styles/mixins.scss';
 
-
 .customFieldContainer {
     position: relative;
-
 }
 
-.customField{
-    border: 1px solid $primary-text;
-    border-radius: 24px;
-    padding: 16px 24px;
-    width: 100%;
-    outline: none;
-    @include inputPlaceholder;
-    &::placeholder{
-       color: $primary-text;
-       opacity: 1;
-    }
+.customField {
+    @include customFieldSetting;
 }
 
-.floatingLabel{
-    position: absolute;
-    top: 0px;
-    left: 25px;
-    font-family: 'Inter';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
+.floatingLabel {
+   @include floatingLabel;
 }
 
-
-.errorMessage{
+.errorMessage {
     @include inputError;
     position: absolute;
     bottom: -15px;
