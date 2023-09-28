@@ -13,7 +13,7 @@ type StaticCasesProps = {
 export const StaticCases = ({ cases }: StaticCasesProps) => (
     <div className={styles.casesVariants}>
         {cases.map((caseVariant) => (
-            <div className={styles.isTabletCase}>
+            <div className={styles.isTabletCase} key={caseVariant.key}>
                 <div className={styles.mainImage}>
                     <Image
                         src={caseVariant.image}
@@ -25,7 +25,7 @@ export const StaticCases = ({ cases }: StaticCasesProps) => (
                         blurDataURL={BLUR_DATA_URL}
                     />
                 </div>
-                <CasesTextBlock slide={caseVariant} isMobile={true} />
+                <CasesTextBlock slide={caseVariant} />
             </div>
         ))}
     </div>

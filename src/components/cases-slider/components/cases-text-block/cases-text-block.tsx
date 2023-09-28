@@ -8,14 +8,9 @@ import styles from './cases-text-block.module.scss';
 type CasesTextBlockProps = {
     slide: CaseContent;
     slideRef?: Ref<HTMLDivElement>;
-    isMobile?: boolean;
 };
 
-export const CasesTextBlock = ({
-    slide: { title, content },
-    slideRef,
-    isMobile = false,
-}: CasesTextBlockProps) => (
+export const CasesTextBlock = ({ slide: { title, content }, slideRef }: CasesTextBlockProps) => (
     <motion.div className={styles.leftSection} ref={slideRef}>
         <div className={styles.textWrapper}>
             <div className={styles.casesTextContent}>
