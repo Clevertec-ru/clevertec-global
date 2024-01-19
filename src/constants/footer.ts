@@ -4,7 +4,7 @@ export const FOOTER_INFO = {
     {
       contactType: 'address',
       icon: '/images/footer/icon-address.svg',
-      text: 'Klimczaka, Warszawa, Masovian Voivodeship 02-797, Poland',
+      text: 'WARSAW, 02-591, ul. STEFANA BATOREGO 18/108',
     },
     {
       contactType: 'phone',
