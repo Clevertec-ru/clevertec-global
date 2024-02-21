@@ -1,0 +1,31 @@
+.modalContainer {
+  position: relative;
+  padding: 55px 48px;
+  margin: 16px;
+  width: 640px;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .modalContainer {
+    padding: 31px 48px;
+    width: 474px;
+  }
+}
+@media (max-width: 560px) {
+  .modalContainer {
+    padding: 31px 24px;
+    width: 100%;
+  }
+}
+.modalContainer .closeButton {
+  position: absolute;
+  top: 24px;
+  right: 27px;
+  height: 32px;
+  width: 32px;
+  transition: all 0.3s ease-in-out;
+}
+.modalContainer .closeButton:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=modal.module.css.map */

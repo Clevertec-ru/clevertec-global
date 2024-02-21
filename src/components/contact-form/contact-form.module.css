@@ -1,0 +1,39 @@
+.contactFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 800px) {
+  .contactFormContainer {
+    gap: 24px;
+  }
+}
+.contactFormContainer .contactFormTitle {
+  font-family: "Rubik";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 24px;
+  text-align: center;
+}
+@media (max-width: 850px) {
+  .contactFormContainer .contactFormTitle {
+    font-size: 28px;
+  }
+}
+@media (max-width: 800px) {
+  .contactFormContainer .contactFormTitle {
+    margin-bottom: 16px;
+  }
+}
+.contactFormContainer .contactFormFields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 800px) {
+  .contactFormContainer .contactFormFields {
+    gap: 16px;
+  }
+}/*# sourceMappingURL=contact-form.module.css.map */

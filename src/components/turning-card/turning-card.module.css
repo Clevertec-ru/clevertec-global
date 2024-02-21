@@ -1,0 +1,44 @@
+.turningCard {
+  cursor: pointer;
+  perspective: 800px;
+  position: relative;
+  transition: all 1s;
+  transform-style: preserve-3d;
+  border-radius: 40px;
+}
+.turningCard:hover {
+  transform: rotateY(180deg);
+  background-color: #1D1D1D;
+}
+@-moz-document url-prefix() {
+  .turningCard {
+    perspective: 0;
+    transform-style: flat;
+    transition: all 1s ease-out;
+  }
+  .turningCard:hover {
+    transform: rotateY(0);
+    background-color: transparent;
+  }
+  .turningCard > :first-child {
+    opacity: 1;
+  }
+  .turningCard > :first-child:hover {
+    opacity: 0;
+  }
+  .turningCard > :last-child {
+    backface-visibility: visible;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotateY(360deg);
+    padding: 32px 24px;
+    transition: all 0.5s ease-in-out;
+  }
+  .turningCard > :last-child:hover {
+    background-color: #1D1D1D;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=turning-card.module.css.map */

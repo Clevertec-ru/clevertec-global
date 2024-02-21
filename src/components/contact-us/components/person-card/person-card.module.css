@@ -1,0 +1,124 @@
+.sectionWrapper {
+  border-radius: 40px;
+  background: #F5F5F5;
+  padding: 32px 32px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  grid-column: span 3;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  min-height: 380px;
+}
+@media (max-width: 1420px) {
+  .sectionWrapper {
+    min-height: 420px;
+  }
+}
+@media (max-width: 1310px) {
+  .sectionWrapper {
+    min-height: 440px;
+  }
+}
+@media (max-width: 1190px) {
+  .sectionWrapper {
+    min-height: 530px;
+  }
+}
+@media (max-width: 1110px) {
+  .sectionWrapper {
+    min-height: 560px;
+  }
+}
+@media (max-width: 1060px) {
+  .sectionWrapper {
+    min-height: 600px;
+  }
+}
+@media (max-width: 1024px) {
+  .sectionWrapper {
+    min-height: 360px;
+  }
+}
+@media (max-width: 760px) {
+  .sectionWrapper {
+    min-height: 380px;
+  }
+}
+@media (max-width: 700px) {
+  .sectionWrapper {
+    min-height: 420px;
+  }
+}
+@media (max-width: 650px) {
+  .sectionWrapper {
+    min-height: 450px;
+  }
+}
+@media (max-width: 590px) {
+  .sectionWrapper {
+    min-height: 530px;
+  }
+}
+@media (max-width: 520px) {
+  .sectionWrapper {
+    min-height: 600px;
+  }
+}
+@media (max-width: 470px) {
+  .sectionWrapper {
+    border-radius: 40px;
+    background: #F5F5F5;
+    padding: 24px 24px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+  }
+}
+.sectionWrapper .avatarContainer {
+  position: relative;
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sectionWrapper .cardTitle {
+  font-family: "Rubik";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+@media (max-width: 1100px) {
+  .sectionWrapper .cardTitle {
+    font-size: 28px;
+  }
+}
+.sectionWrapper .cardInfo {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 470px) {
+  .sectionWrapper .cardInfo {
+    font-size: 22px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 400px) {
+  .sectionWrapper .cardInfo {
+    font-size: 20px;
+    line-height: 110%;
+  }
+}
+.sectionWrapper:hover {
+  background-color: #1D1D1D;
+}
+.sectionWrapper:hover .cardTitle {
+  color: #FFFFFF;
+}
+.sectionWrapper:hover .cardInfo {
+  color: #FFFFFF;
+}/*# sourceMappingURL=person-card.module.css.map */

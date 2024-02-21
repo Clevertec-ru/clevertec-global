@@ -1,0 +1,78 @@
+.about {
+  padding-left: 72px;
+  padding-right: 72px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 1000px) {
+  .about {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 550px) {
+  .about {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.about .aboutTitle {
+  font-family: "Rubik";
+  color: rgba(29, 29, 29, 0.502);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+@media (max-width: 1100px) {
+  .about .aboutTitle {
+    font-size: 20px;
+  }
+}
+.about .aboutText {
+  padding-top: 8px;
+  max-width: 960px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 850px) {
+  .about .aboutText {
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 460px) {
+  .about .aboutText {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+.about .aboutCards {
+  padding-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+@media (max-width: 1350px) {
+  .about .aboutCards {
+    padding-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .about .aboutCards {
+    padding-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=about.module.css.map */

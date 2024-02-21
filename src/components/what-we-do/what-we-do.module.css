@@ -1,0 +1,109 @@
+.whatWeDo {
+  padding-left: 72px;
+  padding-right: 72px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 1000px) {
+  .whatWeDo {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 550px) {
+  .whatWeDo {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.whatWeDo .whatWeDoTextBlock {
+  display: grid;
+  justify-items: end;
+  grid-template-columns: max-content 1fr;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+}
+@media (max-width: 1200px) {
+  .whatWeDo .whatWeDoTextBlock {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+}
+@media (max-width: 750px) {
+  .whatWeDo .whatWeDoTextBlock {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 8px;
+    justify-items: start;
+  }
+}
+.whatWeDo .whatWeDoTextBlock .whatWeDoTitle {
+  font-family: "Rubik";
+  color: rgba(29, 29, 29, 0.502);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+@media (max-width: 1100px) {
+  .whatWeDo .whatWeDoTextBlock .whatWeDoTitle {
+    font-size: 20px;
+  }
+}
+.whatWeDo .whatWeDoTextBlock .whatWeDoText {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  max-width: 770px;
+}
+@media (max-width: 850px) {
+  .whatWeDo .whatWeDoTextBlock .whatWeDoText {
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 460px) {
+  .whatWeDo .whatWeDoTextBlock .whatWeDoText {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+.whatWeDo .whatWeDoTurningCards {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  grid-template-rows: max-content max-content max-content;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+@media (max-width: 1100px) {
+  .whatWeDo .whatWeDoTurningCards {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 16px;
+  }
+}
+.whatWeDo .whatWeDoTurningCards .whatWeDoTurningCard {
+  position: relative;
+}
+.whatWeDo .whatWeDoCards {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+@media (max-width: 1100px) {
+  .whatWeDo .whatWeDoCards {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 16px;
+  }
+}/*# sourceMappingURL=what-we-do.module.css.map */

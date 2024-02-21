@@ -1,0 +1,23 @@
+.overlay {
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1490196078);
+}
+
+.displayOverlay {
+  display: flex;
+}
+
+body:has(.displayOverlay) {
+  overflow-y: hidden;
+}/*# sourceMappingURL=modal-layout.module.css.map */

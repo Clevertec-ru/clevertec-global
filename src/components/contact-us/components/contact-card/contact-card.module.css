@@ -1,0 +1,70 @@
+.sectionWrapper {
+  border-radius: 40px;
+  background: #F5F5F5;
+  padding: 32px 24px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  grid-column: span 4;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.sectionWrapper .linkContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sectionWrapper .titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionWrapper svg {
+  width: 27px;
+  height: 27px;
+}
+.sectionWrapper .cardTitle {
+  font-family: "Rubik";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+@media (max-width: 1100px) {
+  .sectionWrapper .cardTitle {
+    font-size: 28px;
+  }
+}
+.sectionWrapper .cardInfo {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 470px) {
+  .sectionWrapper .cardInfo {
+    font-size: 22px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 400px) {
+  .sectionWrapper .cardInfo {
+    font-size: 20px;
+    line-height: 110%;
+  }
+}
+.sectionWrapper:last-of-type {
+  grid-column: span 2;
+}
+.sectionWrapper:hover {
+  background-color: #488BF7;
+}
+.sectionWrapper:hover .cardTitle {
+  color: #FFFFFF;
+}
+.sectionWrapper:hover .cardInfo {
+  color: #FFFFFF;
+}
+.sectionWrapper:hover svg path {
+  fill: white;
+}/*# sourceMappingURL=contact-card.module.css.map */

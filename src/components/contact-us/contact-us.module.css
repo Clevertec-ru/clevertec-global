@@ -1,0 +1,72 @@
+.sectionWrapper {
+  padding-left: 72px;
+  padding-right: 72px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+@media (max-width: 1000px) {
+  .sectionWrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 550px) {
+  .sectionWrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.sectionWrapper .sectionTitle {
+  font-family: "Rubik";
+  color: rgba(29, 29, 29, 0.502);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 8px;
+}
+@media (max-width: 1100px) {
+  .sectionWrapper .sectionTitle {
+    font-size: 20px;
+  }
+}
+.sectionWrapper .contactText {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  max-width: 968px;
+}
+@media (max-width: 850px) {
+  .sectionWrapper .contactText {
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 460px) {
+  .sectionWrapper .contactText {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+.sectionWrapper .cardsContainer {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto;
+}
+@media (max-width: 1024px) {
+  .sectionWrapper .cardsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.sectionWrapper .cardsContainer:nth-child(3) {
+  grid-column: span 4;
+}/*# sourceMappingURL=contact-us.module.css.map */

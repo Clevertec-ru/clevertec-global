@@ -1,0 +1,76 @@
+.burgerMenu {
+  display: grid;
+  row-gap: 20px;
+  grid-template-rows: repeat(4, max-content);
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  padding: 80px 0 32px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-height: 1200px;
+  height: 100%;
+  width: 80vw;
+  background: #FFFFFF;
+  overflow-y: auto;
+  transition: all 0.3s;
+  z-index: 5;
+}
+
+.burgerMenu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.burgerMenuLink {
+  display: flex;
+  padding: 12px 36px;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.navMenuButton {
+  font-family: "Rubik";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  cursor: pointer;
+}
+
+.burgerMenuButton {
+  margin-top: auto;
+  padding-left: 32px;
+}
+
+.goBack img {
+  transform: rotate(180deg);
+  z-index: 10;
+}
+
+@media all and (min-width: 950px) {
+  .burgerMenu.open {
+    visibility: hidden;
+  }
+}
+@media all and (max-width: 950px) {
+  .burgerMenuSubstrate {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: calc(var(--vh, 1vh) * 100);
+    height: 100%;
+    width: 100vw;
+    background: rgba(37, 41, 61, 0.4);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .burgerMenuButton {
+    padding-right: 32px;
+  }
+}/*# sourceMappingURL=burger-menu.module.css.map */

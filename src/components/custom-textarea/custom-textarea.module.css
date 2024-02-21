@@ -1,0 +1,49 @@
+.textAreaWrapper {
+  position: relative;
+}
+.textAreaWrapper .contactFormTextArea {
+  border: 1px solid #1D1D1D;
+  border-radius: 24px;
+  padding: 16px 24px;
+  width: 100%;
+  outline: none;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  resize: none;
+}
+@media (max-width: 850px) {
+  .textAreaWrapper .contactFormTextArea {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .textAreaWrapper .contactFormTextArea {
+    padding: 16px 12px;
+  }
+}
+.textAreaWrapper .contactFormTextArea::-moz-placeholder {
+  color: #1D1D1D;
+  opacity: 1;
+}
+.textAreaWrapper .contactFormTextArea::placeholder {
+  color: #1D1D1D;
+  opacity: 1;
+}
+.textAreaWrapper .floatingLabel {
+  position: absolute;
+  top: 2px;
+  left: 25px;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+@media (max-width: 400px) {
+  .textAreaWrapper .floatingLabel {
+    left: 14px;
+  }
+}/*# sourceMappingURL=custom-textarea.module.css.map */

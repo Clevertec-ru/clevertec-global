@@ -1,0 +1,51 @@
+.backCard {
+  position: absolute;
+  right: 24px;
+  top: 32px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  color: #FFFFFF;
+  border-radius: 40px;
+  min-width: 350px;
+}
+.backCard .backCardTitle {
+  font-family: "Rubik";
+  color: #FFFFFF;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+@media (max-width: 1100px) {
+  .backCard .backCardTitle {
+    font-size: 20px;
+  }
+}
+.backCard .backCardItems {
+  padding-top: 16px;
+}
+.backCard .backCardItems .backCardItem .backCardTech {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  margin-right: 8px;
+}
+@media (max-width: 470px) {
+  .backCard .backCardItems .backCardItem .backCardTech {
+    font-size: 22px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 400px) {
+  .backCard .backCardItems .backCardItem .backCardTech {
+    font-size: 20px;
+    line-height: 110%;
+  }
+}
+.backCard .backCardItems .backCardItem .backCardStack {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}/*# sourceMappingURL=back-card.module.css.map */
